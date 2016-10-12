@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Estoy en Login</h1>
-	<form action="../Acceso" method="post" id="idFormLogin">
+	<form action="../login" method="post" id="idFormLogin">
 		<label for="labelNombre" class="etiqueta">Nombre</label>
 			<input type="text" name="nombre" id="idNombre"><br/>
 		<label for="labelPassword" class="etiqueta">Contraseña</label>
