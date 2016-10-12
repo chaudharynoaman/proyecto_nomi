@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+	<menu id="1" idp="0" etiqueta="Persona" accion="" />
+	<menu id="2" idp="1" etiqueta="Crear" accion="persona/crear" />
+	<menu id="3" idp="1" etiqueta="Listar" accion="persona/listar" />
+</menus>
