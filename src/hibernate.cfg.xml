@@ -18,6 +18,7 @@
 		<property name="hibernate.enable_lazy_load_no_trans">true</property>
 		
 		<mapping class="app.bean.Persona" />
-		<mapping class="app.bean.Usuarios" />
+		<mapping class="app.bean.Usuario" />
+		
     </session-factory>
 </hibernate-configuration>

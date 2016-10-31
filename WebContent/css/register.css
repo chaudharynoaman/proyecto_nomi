@@ -1,0 +1,18 @@
+#idFormRegister{
+	padding-top:100px;
+	padding-bottom:60px;
+	max-width: 380px;	
+	margin:0 auto;
+}
+
+#idSubmitRegister{	
+	border-radius: 0;
+}
+
+#info1{
+	font-weight:bold;
+	
+}
+.form-signin-heading{
+	margin-bottom:30px;
+}

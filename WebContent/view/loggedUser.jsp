@@ -8,13 +8,13 @@
 </head>
 <body>
 
-<%if(session.getAttribute("nombreUsuario")==null){
+<%if(session.getAttribute("nombreUsuarioConectado")==null){
 	response.sendRedirect("login.jsp");
 }
 
 %>
 
-<h1>Hola ${nombreUsuario} Eres Administrador!!</h1>
+<h1>Hola ${nombreUsuarioConectado} has hecho login!!</h1>
 
 <form name="f1" action="../Logout" method="post">
 	<input type="submit" value="desconectar">

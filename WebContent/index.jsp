@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
   	<head>
-  		<title>Home</title>
+  		<title>Home</title> 
 
 		<meta charset="utf-8">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,36 +25,30 @@
 		
 
 		<link rel="icon" href="http://www.altran.es/fileadmin/templates/main/img/altran/favicon.ico" type="image/x-ico; charset=binary" />
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		
+		
+		<!-- External fonts -->    
+    	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <!--<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
-  
+    	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">  
 
 
 
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-
-
-
-
-
+		<link rel="stylesheet" type="text/css" href="css/main.css">    
+    	<link rel="stylesheet" type="text/css" href="css/footer.css">
+    	<link rel="stylesheet" type="text/css" href="css/login.css">
+    	<link rel="stylesheet" type="text/css" href="css/register.css"> 
     
-    <link rel="stylesheet" href="css/footer.css">
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
 		
 
 	</head>
 
-	<body style="padding-top: 60px">
-	<div class="container-fluid">
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<body style="padding-top: 140px">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">		
       		<div class="container">
       		 	<!-- El logotipo y el icono que despliega el menú se agrupan
        				 para mostrarlos mejor en los dispositivos móviles -->
@@ -73,103 +67,47 @@
         		<div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">  
           			<ul class="nav navbar-nav" id="menu-items">
             			<!--<li class="active"><a href="#">Home</a></li>-->
-            			<li><a href="#">SOBRE NOSOTROS</a></li>
-            			<li><a href="#">SERVICIOS</a></li>
-            			<li><a href="#">TRABAJA EN SLACK </a></li>
-            			
+            			<li><a href="#">Servicios</a></li>
+            			<li><a href="#">Quienes somos</a></li>
+            			<li><a href="#">Qué nos diferencia </a></li>
+            			<li><a href="#">Empleo</a></li>            			
             		</ul>
             		<ul class="nav navbar-nav navbar-right" id="menu-items">
-            			<li><a href="#">ACCEDE</a></li> 
-            			<li><a href="#">REGISTRO</a></li>      			
+            			<li><a href="view/login.jsp">Accede</a></li> 
+            			<li><a href="view/register.jsp">Registro</a></li>      			
           			</ul>
         		</div><!--/.nav-collapse -->
       		</div>
-      	</nav>
+      	</div>
+	</nav>
+    <div>  
+    <p>Hola soy ahmed 1</p><br/><p>Hola 2</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
+    <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
+    <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>       
+	</div>
+	
+	
+	<footer class="footer-distributed">
+        <div class="footer-left">
 
-        <p>hola</p><br/><p>hola</p><br/><p>hola</p><br/><p>hola</p><br/><p>hola</p><br/><p>hola</p><br/><p>hola</p><br/><p>hola</p><br/><p>hola</p><br/>
+          <h3>SLACK</h3>
+
+          <p class="footer-links">
+            <a href="#">Aviso Legal</a>
+            ·
+            <a href="#">Privacidad</a>
+            ·
+            <a href="#">Política de cookies</a>
+            ·
+            <a href="#">Contacto</a>
+          </p>
+
+          <p class="footer-company-name">&copy; 2016 SLACK</p>
+        </div>
+    </footer>
     
 
-       
-
-      <!--
-      <footer class="footer">
-        <nav class="navbar navbar-inverse navbar-bottom" role="navigation">  
-          <div class="container-fluid">          
-                <ul class="nav navbar-nav" id="footer-items">
-                    <li><a href="">© 2016 Compañia </a></li>
-                    <li><a href="http://www.adecco.es/_common/AvisoLegal.aspx">Aviso Legal</a></li>                   
-                    <li><a href="http://www.adecco.es/_common/CompromisoPrivacidad.aspx">Privacidad</a></li>
-                    <li><a href="http://www.adecco.es/_common/PoliticaCookies.aspx">Política de cookies</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>             
-          </div>
-        </nav>
-      </footer>   
-      -->
-
-
-    <footer class="footer-distributed">
-
-      <div class="footer-left">
-
-        <h3>SLACK</h3>
-
-        <p class="footer-links">
-          <a href="#">Aviso Legal</a>
-          ·
-          <a href="#">Privacidad</a>
-          ·
-          <a href="#">Política de cookies</a>
-          ·
-          <a href="#">Contacto</a>
-        </p>
-
-        <p class="footer-company-name">&copy; 2016 SLACK</p>
-      </div>
-
-      <div class="footer-center">
-
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>Calle Campezo 1 </span>28022 Madrid, España</p>
-        </div>
-
-        <div>
-          <i class="fa fa-phone"></i>
-          <p>+34 91 123 45 67</p>
-        </div>
-
-        <!--<div>
-          <i class="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">support@company.com</a></p>
-        </div>-->
-
-      </div>
-
-      <div class="footer-right">
-
-        <p class="footer-company-about">
-          <span>Sobre SLACK</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-        </p>
-
-        <div class="footer-icons">
-
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          
-         
-
-        </div>
-
-      </div>
-
-    </footer>
-
-
-
-
-  </div>
+  
 
 	</body>
 

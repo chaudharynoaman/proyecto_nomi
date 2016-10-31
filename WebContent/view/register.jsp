@@ -1,10 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-
 <!DOCTYPE html>
 <html>
   	<head>
-  		<title>Login</title> 
+  		<title>Registro</title> 
 
 		<meta charset="utf-8">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +15,7 @@
 
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -40,8 +38,14 @@
     	<link rel="stylesheet" type="text/css" href="../css/footer.css">
     	<link rel="stylesheet" type="text/css" href="../css/login.css">
     	<link rel="stylesheet" type="text/css" href="../css/register.css"> 
-    
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.js"></script>
+    	
+    	
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.js"></script>
+    	
+    	  	
+    	
+    	
+
 		
 
 	</head>
@@ -76,31 +80,78 @@
             			<li><a href="../view/login.jsp">Accede</a></li> 
             			<li><a href="../view/register.jsp">Registro</a></li>      			
           			</ul>
-        		</div>
+        		</div><!--/.nav-collapse -->
       		</div>
       	</div>
 	</nav>
 
  
 <div class="container">
-
-     		<form class="form-signin" action="../login" method="post" id="idFormLogin">
-				<h2 class="form-signin-heading">Acceso candidatos</h2>	
-				<label for="labelEmail" class="etiqueta">E-mail</label>
-					<input type="email" name="emailLogin" class="form-control" id="idEmailLogin" autocomplete="off" oncopy="return false" onpaste="return false" required><br/>
-				<label for="labelPassword" class="etiqueta">Contraseña</label>
-					<input type="password" name="passwordLogin" class="form-control" id="idPasswordLogin" autocomplete="off" oncopy="return false" onpaste="return false" required><br/>
-		
-				<button class="btn btn-md btn-primary btn-block" type="submit" id="idSubmitButton">Iniciar Sesión</button>
+	<form class="form-signin" name="registro" action="../usuario" method="post" id="idFormRegister" role="form" data-toggle="validator" >
+		<h2 class="form-signin-heading">Formulario de registro</h2>	
+			<div class="form-group has-feedback">
+				<label for="labelNombreRegistro" class="control-label">Nombre</label>
+				<input type="text" name="nombreRegistro" class="form-control" id="idNombreRegistro"	pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,50}$" autocomplete="off" data-error="Error. El nombre introducido no es válido" required>		
+				<span class="glyphicon form-control-feedback"></span>
+				<div class="help-block with-errors"></div>
+			</div>
 			
+			
+			<div class="form-group has-feedback">
+				<label for="labelApellidosRegistro" class="control-label">Apellidos</label>
+				<input type="text" name="apellidosRegistro" class="form-control" id="idApellidosRegistro" pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,50}$" autocomplete="off" data-error="Error. El apellido introducido no es válido" required>				
+				<span class="glyphicon form-control-feedback"></span>
+				<div class="help-block with-errors"></div>
+			</div>
+			
+			
+			<div style="height: 30px;"></div>
+			<p id="info1">Datos de la cuenta</p>
+			<div class="form-group has-feedback">			
+				<label for="labelEmailRegistro" class="control-label">E-mail</label>
+				<input type="email" name="emailRegistro" class="form-control" id="idEmailRegistro" 
+				pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" 
+				data-error="El E-mail introducido no es válido" autocomplete="off" required>
+				<span class="glyphicon form-control-feedback"></span>								
+				<div class="help-block with-errors"></div>
+			</div>
+			
+			
+			<div class="form-group has-feedback">
+				<label for="labelPasswordRegistro" class="control-label">Contraseña</label>
+				<input type="password" name="passwordRegistro" class="form-control" id="idPasswordRegistro" data-error="La contraseña debe tener mínimo 2 caracteres" minlength=2 autocomplete="off" oncopy="return false" onpaste="return false" required>
+				<span class="glyphicon form-control-feedback"></span>
+				<div class="help-block with-errors"></div>
+			</div>
+			
+			<div class="form-group has-feedback">
+				<label for="labelConfirmPasswordRegistro" class="control-label">Repita la contraseña</label>
+				<input type="password" name="confirmPasswordRegistro" class="form-control" id="idConfirmPasswordRegistro" data-match="#idPasswordRegistro" data-match-error="La contraseña no coincide" minlength=2 autocomplete="off" oncopy="return false" onpaste="return false" required>							
+				<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+				<div class="help-block with-errors"></div>
+			</div>
+			
+				
+			<div>
+			<input type="hidden" name="user_type" class="form-control" value="1">
+			</div>
+			
+			
+			<div class="form-group">
+				<button class="btn btn-md btn-primary btn-block" type="submit" id="idSubmitRegister">Crear cuenta</button>
+			</div>
+			<p class="form-group">Al continuar aceptas el Uso del servicio, las Condiciones de uso y la Política de privacidad</p>
+			<hr>
+			<p id="info">¿Ya tienes una cuenta? <a href="login.jsp">Entra</a></p>
 	
-				<p id="idInformationRegister">¿Aún no estás registrado? <a href="../view/register.jsp">Date de alta como candidato</a></p>
-			</form>
+	
+	
+	</form>
 </div>
 
 
 
-
+		
 
 
 

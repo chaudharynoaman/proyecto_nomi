@@ -8,28 +8,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import app.bean.Persona;
-import app.bean.Usuarios;
-import app.model.UsuarioModel;
+import app.bean.Usuario;
+import app.model.LoginModel;
 
 /**
  * Servlet implementation class Acceso
  */
 @SuppressWarnings("serial")
-@WebServlet("/login")
-public class Login extends HttpServlet {
+@WebServlet({ "/login", "/login/", "/login/*" })
+public class LoginController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nombre = request.getParameter("nombre");
-		String pw = request.getParameter("pass");
+		String emailLogin = request.getParameter("emailLogin");
+		String passwordLogin = request.getParameter("passwordLogin");		
 		
-		Usuarios usu= new UsuarioModel().getUsuario(nombre, pw);
+		
+		Usuario usu = new LoginModel().getUsuario(emailLogin, passwordLogin);
 		
 		//System.out.println(usu.getNombre());
 		
 		if (usu != null) {
 			HttpSession sesion = request.getSession(true);
-			sesion.setAttribute("nombreUsuario", nombre);
+			sesion.setAttribute("nombreUsuarioConectado", emailLogin);
 			
 			response.sendRedirect("view/loggedUser.jsp");
 		} 
@@ -37,20 +37,7 @@ public class Login extends HttpServlet {
 			response.sendRedirect("view/login.jsp");
 		}
 		
-		
-		/*if(nombre.equals("ahmed") && pw.equals("ahmed"))
-		{
-			HttpSession sesion = request.getSession(true);
-			sesion.setAttribute("nombreUsuario", nombre);
-						
-			response.sendRedirect("view/loggedUser.jsp");
-			
-		}
-		else
-		{
-			response.sendRedirect("view/login.jsp");
-			
-		}*/
 	}
+	
 
 }
