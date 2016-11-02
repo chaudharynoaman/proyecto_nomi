@@ -44,7 +44,7 @@
     	
     	  	
     	
-    	
+    	<!-- <script src="../js/main.js"></script>-->
 
 		
 
@@ -91,15 +91,15 @@
 		<h2 class="form-signin-heading">Formulario de registro</h2>	
 			<div class="form-group has-feedback">
 				<label for="labelNombreRegistro" class="control-label">Nombre</label>
-				<input type="text" name="nombreRegistro" class="form-control" id="idNombreRegistro"	pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,50}$" autocomplete="off" data-error="Error. El nombre introducido no es válido" required>		
+				<input type="text" name="nombreRegistro" class="form-control" id="idNombreRegistro"	pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,30}$" autocomplete="off" onkeyup="comprobarEspacios()" data-error="Error. El nombre introducido no es válido" required/>		
 				<span class="glyphicon form-control-feedback"></span>
-				<div class="help-block with-errors"></div>
+				<div class="help-block with-errors" id="one"></div>
 			</div>
 			
 			
 			<div class="form-group has-feedback">
 				<label for="labelApellidosRegistro" class="control-label">Apellidos</label>
-				<input type="text" name="apellidosRegistro" class="form-control" id="idApellidosRegistro" pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,50}$" autocomplete="off" data-error="Error. El apellido introducido no es válido" required>				
+				<input type="text" name="apellidosRegistro" class="form-control" id="idApellidosRegistro" pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,30}$" autocomplete="off" data-error="Error. El apellido introducido no es válido" required/>				
 				<span class="glyphicon form-control-feedback"></span>
 				<div class="help-block with-errors"></div>
 			</div>
@@ -111,7 +111,7 @@
 				<label for="labelEmailRegistro" class="control-label">E-mail</label>
 				<input type="email" name="emailRegistro" class="form-control" id="idEmailRegistro" 
 				pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" 
-				data-error="El E-mail introducido no es válido" autocomplete="off" required>
+				data-error="El E-mail introducido no es válido" autocomplete="off" required/>
 				<span class="glyphicon form-control-feedback"></span>								
 				<div class="help-block with-errors"></div>
 			</div>
@@ -119,21 +119,21 @@
 			
 			<div class="form-group has-feedback">
 				<label for="labelPasswordRegistro" class="control-label">Contraseña</label>
-				<input type="password" name="passwordRegistro" class="form-control" id="idPasswordRegistro" data-error="La contraseña debe tener mínimo 2 caracteres" minlength=2 autocomplete="off" oncopy="return false" onpaste="return false" required>
+				<input type="password" name="passwordRegistro" class="form-control" id="idPasswordRegistro" data-error="La contraseña debe tener mínimo 2 caracteres" minlength="2" maxlength="20" autocomplete="off" oncopy="return false" onpaste="return false" required/>
 				<span class="glyphicon form-control-feedback"></span>
 				<div class="help-block with-errors"></div>
 			</div>
 			
 			<div class="form-group has-feedback">
 				<label for="labelConfirmPasswordRegistro" class="control-label">Repita la contraseña</label>
-				<input type="password" name="confirmPasswordRegistro" class="form-control" id="idConfirmPasswordRegistro" data-match="#idPasswordRegistro" data-match-error="La contraseña no coincide" minlength=2 autocomplete="off" oncopy="return false" onpaste="return false" required>							
+				<input type="password" name="confirmPasswordRegistro" class="form-control" id="idConfirmPasswordRegistro" data-match="#idPasswordRegistro" data-match-error="La contraseña no coincide" minlength="2" maxlength="20" autocomplete="off" oncopy="return false" onpaste="return false" required/>							
 				<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 				<div class="help-block with-errors"></div>
 			</div>
 			
 				
 			<div>
-			<input type="hidden" name="user_type" class="form-control" value="1">
+			<input type="hidden" name="user_type" class="form-control" value="1"/>
 			</div>
 			
 			

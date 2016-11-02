@@ -19,6 +19,7 @@
 		
 		<mapping class="app.bean.Persona" />
 		<mapping class="app.bean.Usuario" />
+		<mapping class="app.bean.Job" />
 		
     </session-factory>
 </hibernate-configuration>

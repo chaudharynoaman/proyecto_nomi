@@ -85,14 +85,21 @@
 <div class="container">
 
      		<form class="form-signin" action="../login" method="post" id="idFormLogin">
-				<h2 class="form-signin-heading">Acceso candidatos</h2>	
-				<label for="labelEmail" class="etiqueta">E-mail</label>
-					<input type="email" name="emailLogin" class="form-control" id="idEmailLogin" autocomplete="off" oncopy="return false" onpaste="return false" required><br/>
-				<label for="labelPassword" class="etiqueta">Contraseña</label>
-					<input type="password" name="passwordLogin" class="form-control" id="idPasswordLogin" autocomplete="off" oncopy="return false" onpaste="return false" required><br/>
-		
-				<button class="btn btn-md btn-primary btn-block" type="submit" id="idSubmitButton">Iniciar Sesión</button>
-			
+				<h2 class="form-signin-heading">Acceso candidatos</h2>
+					
+				<div class="form-group">
+					<label for="labelEmail" class="etiqueta">E-mail</label>
+					<input type="email" name="emailLogin" class="form-control" id="idEmailLogin" autocomplete="off" oncopy="return false" onpaste="return false" required/>
+				</div>
+				
+				<div class="form-group">
+					<label for="labelPassword" class="etiqueta">Contraseña</label>
+					<input type="password" name="passwordLogin" class="form-control" id="idPasswordLogin" autocomplete="off" oncopy="return false" onpaste="return false" required/>
+				</div>
+				
+				<div class="form-group">
+					<button class="btn btn-md btn-primary btn-block" type="submit" id="idSubmitButton">Iniciar Sesión</button>
+				</div>
 	
 				<p id="idInformationRegister">¿Aún no estás registrado? <a href="../view/register.jsp">Date de alta como candidato</a></p>
 			</form>

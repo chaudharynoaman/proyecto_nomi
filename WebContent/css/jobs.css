@@ -1,0 +1,22 @@
+#idFormJob{
+	padding-top:100px;
+	padding-bottom:60px;
+	max-width: 380px;	
+	margin:0 auto;
+	
+}
+
+input[type="text"]{
+	border-radius: 0;
+	border-radius: 0;
+}
+
+
+#idSubmitJob{	
+	border-radius: 0;
+}
+
+.form-signin-heading{
+	margin-bottom:30px;
+}
+

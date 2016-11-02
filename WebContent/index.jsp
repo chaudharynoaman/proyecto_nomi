@@ -69,19 +69,20 @@
             			<!--<li class="active"><a href="#">Home</a></li>-->
             			<li><a href="#">Servicios</a></li>
             			<li><a href="#">Quienes somos</a></li>
-            			<li><a href="#">Qué nos diferencia </a></li>
-            			<li><a href="#">Empleo</a></li>            			
+            			<li><a href="view/jobCreate.jsp">Qué nos diferencia </a></li>
+            			<li><a href="view/jobs.jsp">Empleo</a></li>            			
             		</ul>
             		<ul class="nav navbar-nav navbar-right" id="menu-items">
             			<li><a href="view/login.jsp">Accede</a></li> 
             			<li><a href="view/register.jsp">Registro</a></li>      			
           			</ul>
-        		</div><!--/.nav-collapse -->
+        		</div>
       		</div>
       	</div>
 	</nav>
-    <div>  
-    <p>Hola soy ahmed 1</p><br/><p>Hola 2</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
+	
+    <div class="container">  
+    <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
     <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
     <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>       
 	</div>
