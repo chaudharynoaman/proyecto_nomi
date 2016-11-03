@@ -43,7 +43,7 @@
 				
 				<div class="form-group">
 					<label for="labelFecha" class="etiqueta">Fecha publicacion</label>
-					<input type="date" name="fechaTrabajo" class="form-control" id="idFechaTrabajo"/>
+					<input type="date" data-format="dd-mm-yyyy" name="fechaTrabajo" class="form-control" id="idFechaTrabajo"/>
 				</div>
 	
 				<div class="form-group">

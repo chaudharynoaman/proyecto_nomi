@@ -9,9 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import app.bean.Job;
-import app.bean.Persona;
 import app.model.JobModel;
-import app.model.PersonaModel;
 
 /**
  * Servlet implementation class JobController
@@ -41,9 +39,6 @@ public class JobController extends HttpServlet {
 		
 		
 		
-			List<Job> jobs = new JobModel().getTodos();
-			response.sendRedirect("view/jobs.jsp");
-			
 		
 	}
 
