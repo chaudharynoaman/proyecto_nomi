@@ -42,4 +42,38 @@ public class JobController extends HttpServlet {
 		
 	}
 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException	{
+
+		/**
+		 * Seguramente no compile (no lo puedo probar)
+		 * pero la idea sería esta:
+		 *
+		 * Desde aquí se hace la llamada al modelo para obtener todos los trabajos. Esto lo tenías bien. 
+		 * Dentro de JobModel es desde donde se hace la consulta a BBDD: abres la conexion y obtienes todos los datos
+		 * en un array...
+		 * 
+		 */
+		List<Job> jobs = new JobModel().getTodos();
+
+		/*
+		Ahora lo que tienes que hacer es guardar ese array en un parametro de la request. 
+		Y luego desde la JSP obtenerlo.
+
+		Creo que era:
+		 */
+		
+		request.setAttribute("jobs", jobs);
+
+		/* Y en la JSP tendrías que hacer: 
+
+			List<Job> jobs = request.getAttribute("jobs");
+
+			Te lo escribo en la JSP....
+
+		*/
+
+		response.sendRedirect("view/jobs.jsp");
+	}
+	
+
 }

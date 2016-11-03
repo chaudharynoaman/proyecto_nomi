@@ -74,6 +74,19 @@
                 <p> <%= resultset.getString(9) %></p>
             
             <% } %>
+
+         <% //**********************************
+         //Tendrías que sustituir lo anterior por algo como: (no sé si compilará)
+         List<Job> jobs = (List<Job>) request.getAttribute("jobs"); //te pedirá hacer import de la clase List o algo así
+
+         for (int i = 0; i < jobs.size(); i++) {
+         	Job job = jobs.get(i);
+         %>
+           <p> <%= job.getTitulo() %></p>
+           <p> <%= job.getDescripcion() %></p>
+           ...(y lo que te haga falta)
+
+         <% } %>
       </div>  
     </BODY>
 </HTML>
