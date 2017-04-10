@@ -7,14 +7,15 @@ import org.mvc.Model;
 import app.bean.Usuario;
 
 public class LoginModel extends Model {
-	public Usuario getUsuario(String emailLogin, String passwordLogin) {
-		@SuppressWarnings("unchecked")
-		List<Usuario> usuarios = ss.createQuery("from Usuario where email='" + emailLogin + "' and password='" + passwordLogin+"'").list();
-		ss.close();
+	@SuppressWarnings("unchecked")
+	public Usuario getUsuario(String emailLogin, String passwordLogin) {		
+		List<Usuario> usuarios = ss.createQuery("from Usuario where email='" + emailLogin + "' and password='" + passwordLogin+"'").getResultList();
+		//ss.close();		
 		if (usuarios.isEmpty()) {
 			return null;
-		} else {
-			return usuarios.get(0);
+		} 
+		else {			
+			return usuarios.get(0);			
 		}
 	}
 }

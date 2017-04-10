@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
   	<head>
-  		<title>Login</title> 
+  		<title>SLACK | Login</title> 
 
 		<meta charset="utf-8">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,10 +36,10 @@
 
 
 
-		<link rel="stylesheet" type="text/css" href="../css/main.css">    
-    	<link rel="stylesheet" type="text/css" href="../css/footer.css">
-    	<link rel="stylesheet" type="text/css" href="../css/login.css">
-    	<link rel="stylesheet" type="text/css" href="../css/register.css"> 
+		<link rel="stylesheet" type="text/css" href="./css/main.css">    
+    	<link rel="stylesheet" type="text/css" href="./css/footer.css">
+    	<link rel="stylesheet" type="text/css" href="./css/login.css">
+    	<link rel="stylesheet" type="text/css" href="./css/register.css"> 
     
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.js"></script>
 		
@@ -70,11 +70,11 @@
             			<li><a href="#">Servicios</a></li>
             			<li><a href="#">Quienes somos</a></li>
             			<li><a href="#">Qué nos diferencia </a></li>
-            			<li><a href="#">Empleo</a></li>            			
+            			<li><a href="job">Empleo</a></li>            			
             		</ul>
             		<ul class="nav navbar-nav navbar-right" id="menu-items">
-            			<li><a href="../view/login.jsp">Accede</a></li> 
-            			<li><a href="../view/register.jsp">Registro</a></li>      			
+            			<li><a href="login">Accede</a></li> 
+            			<li><a href="usuario">Registro</a></li>      			
           			</ul>
         		</div>
       		</div>
@@ -84,12 +84,12 @@
  
 <div class="container">
 
-     		<form class="form-signin" action="../login" method="post" id="idFormLogin">
+     		<form class="form-signin" action="login" method="post" id="idFormLogin">
 				<h2 class="form-signin-heading">Acceso candidatos</h2>
 					
 				<div class="form-group">
 					<label for="labelEmail" class="etiqueta">E-mail</label>
-					<input type="email" name="emailLogin" class="form-control" id="idEmailLogin" autocomplete="off" oncopy="return false" onpaste="return false" required/>
+					<input type="email" name="emailLogin" class="form-control" id="idEmailLogin" oncopy="return false" onpaste="return false" required/>
 				</div>
 				
 				<div class="form-group">
@@ -101,7 +101,7 @@
 					<button class="btn btn-md btn-primary btn-block" type="submit" id="idSubmitButton">Iniciar Sesión</button>
 				</div>
 	
-				<p id="idInformationRegister">¿Aún no estás registrado? <a href="../view/register.jsp">Date de alta como candidato</a></p>
+				<p id="idInformationRegister">¿Aún no estás registrado? <a href="usuario">Date de alta como candidato</a></p>
 			</form>
 </div>
 

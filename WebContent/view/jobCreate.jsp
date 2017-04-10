@@ -23,6 +23,26 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" type="text/css" href="../css/jobs.css"> 
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+    $('#idFechaTrabajo').datepicker({
+    	format: "dd/mm/yyyy",
+        weekStart: 1,
+        language: "es",
+        autoclose: true
+    });
+});
+
+
+</script>
+
+
 
 </head>
 <body>
@@ -43,12 +63,13 @@
 				
 				<div class="form-group">
 					<label for="labelFecha" class="etiqueta">Fecha publicacion</label>
-					<input type="date" data-format="dd-mm-yyyy" name="fechaTrabajo" class="form-control" id="idFechaTrabajo"/>
+					<input type="text" name="fechaTrabajo" class="form-control" id="idFechaTrabajo"/>
 				</div>
 	
 				<div class="form-group">
 					<label for="labelDescripcion" class="etiqueta">Descripcion</label>
-					<input type="text" name="descripcionTrabajo" class="form-control" id="idDescripcionTrabajo"/>
+					<textarea rows="7" cols="10" name="descripcionTrabajo" class="form-control" id="idDescripcionTrabajo"></textarea>
+					<!-- <input type="text" name="descripcionTrabajo" class="form-control" id="idDescripcionTrabajo"/>-->
 				</div>
 				
 				<div class="form-group">

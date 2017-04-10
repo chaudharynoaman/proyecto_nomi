@@ -3,16 +3,20 @@
     font-family: 'Montserrat','Helvetica Neue','Helvetica','Arial','sans-serif';
     font-weight: 400;    
     text-transform: uppercase;
-    padding: 17px;
-        
+    padding: 15px;        
 }
 
 .mainlogo{
 	font-family: 'Montserrat';
-	font-size: 36px;
-	color:white;
-	font-weight: bold;
-	margin-top:15px;
+	font-size: 38px;
+	color: #fff;
+	/*color: #fed136;*/
+	font-weight: 700;	
+	float: left;
+    height: 50px;
+    padding: 15px 15px;    
+    line-height: 20px;
+    margin-left: -15px;
 }
 
 #menu-items li a{
@@ -23,12 +27,20 @@
   color: #fed136;
 }
 
+#mainNav {
+    background: #2C3E50;    
+}
 
-
-
-
-
-
+@media screen and (max-width:1200px) {        
+     #menu-items {        
+        padding:0px;
+        font-size:10px;
+    }
+    .mainlogo{
+    	padding:0px;
+    	font-size:32px;
+    }
+}
 
 
 

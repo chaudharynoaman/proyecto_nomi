@@ -1,12 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
-  	<head>
-  		<title>Slack | Home</title>  
-
+<head>
+	<title>SLACK | Admin</title>
 		<meta charset="utf-8">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
    		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,9 +42,9 @@
 
 		
 
-	</head>
+</head>
 
-	<body style="padding-top: 140px">
+<body style="padding-top: 80px">
 	<nav id="mainNav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">		
       		<div class="container">
@@ -73,19 +70,45 @@
             			<li><a href="view/jobCreate.jsp">Qué nos diferencia </a></li>
             			<li><a href="job">Empleo</a></li>            			
             		</ul>
-            		<ul class="nav navbar-nav navbar-right" id="menu-items">
-            			<li><a href="login">Accede</a></li> 
-            			<li><a href="usuario">Registro</a></li>      			
+            		<ul class="nav navbar-nav navbar-right" id="menu-items" style="text-transform: capitalize;">
+            			<li><a href="#">${nombreUsuConectado}</a></li> 
+            			<li><a href="./">Cerrar Sesión</a></li>      			
           			</ul>
         		</div>
       		</div>
       	</div>
 	</nav>
 	
+	<nav class="navbar navbar-default navbar-static-top">
+ 	<div class="container">
+    		<!-- <div class="navbar-header">
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>                        
+      			</button>
+      			
+    		</div>  -->
+<!--     	<div class="collapse navbar-collapse" id="myNavbar">
+ -->      		<ul class="nav navbar-nav ">
+        		<li><a href="#">Publicar Empleo</a></li>
+        		<li><a href="#">Eliminar Empleo</a></li>
+        		<li><a href="#">Lista Candidatos-Empleo</a></li>        		
+      		</ul>
+    	</div>
+  	</div>
+	</nav>
+	
+	
     <div class="container">  
-    <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
-    <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
-    <p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>       
+        <h1>ERES ADMIN</h1>
+		<p>Hola ${emailUsuarioConectado}</p>
+		<p>Tu nombre es: ${nombreUsuConectado} ${apellidosUsuConectado}</p>
+		<p>Y estas conectado como un ADMINISTRADOR!</p>
+		
+		<p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
+		<p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/><p>Hola</p><br/>
+		
 	</div>
 	
 	
@@ -107,10 +130,6 @@
           <p class="footer-company-name">&copy; 2017 SLACK</p>
         </div>
     </footer>
-    
 
-  
-
-	</body>
-
+</body>
 </html>

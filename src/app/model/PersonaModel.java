@@ -17,7 +17,7 @@ public class PersonaModel extends Model {
 	
 	@SuppressWarnings("unchecked")
 	public List<Persona>getTodos(){
-		List<Persona>personas = ss.createQuery("from Persona").list();
+		List<Persona>personas = ss.createQuery("from Persona").getResultList();
 		ss.close();
 		return personas;
 	}

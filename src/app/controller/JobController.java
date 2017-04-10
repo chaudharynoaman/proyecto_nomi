@@ -35,11 +35,24 @@ public class JobController extends HttpServlet {
 		
 		if (trabajo != null) {
 			response.sendRedirect("view/jobCreate.jsp");
-		} 
-		
-		
-		
+		}		
 		
 	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException	{
+		
+		//response.getWriter().println("<h1>JOBS</h1>");
+		
+		List<Job> jobs = new JobModel().getTodos();
+		for (Job job : jobs) {
+			response.getWriter().println(job.getTitulo());
+		}
+		
+		request.setAttribute("jobs", jobs);		
+
+
+		request.getRequestDispatcher("view/jobs.jsp").forward(request, response);
+//		response.sendRedirect("view/jobs.jsp");
+}
 
 }

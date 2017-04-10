@@ -34,10 +34,10 @@
 
 
 
-		<link rel="stylesheet" type="text/css" href="../css/main.css">    
-    	<link rel="stylesheet" type="text/css" href="../css/footer.css">
-    	<link rel="stylesheet" type="text/css" href="../css/login.css">
-    	<link rel="stylesheet" type="text/css" href="../css/register.css"> 
+		<link rel="stylesheet" type="text/css" href="./css/main.css">    
+    	<link rel="stylesheet" type="text/css" href="./css/footer.css">
+    	<link rel="stylesheet" type="text/css" href="./css/login.css">
+    	<link rel="stylesheet" type="text/css" href="./css/register.css"> 
     	
     	
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.js"></script>
@@ -74,11 +74,11 @@
             			<li><a href="#">Servicios</a></li>
             			<li><a href="#">Quienes somos</a></li>
             			<li><a href="#">Qué nos diferencia </a></li>
-            			<li><a href="#">Empleo</a></li>            			
+            			<li><a href="job">Empleo</a></li>            			
             		</ul>
             		<ul class="nav navbar-nav navbar-right" id="menu-items">
-            			<li><a href="../view/login.jsp">Accede</a></li> 
-            			<li><a href="../view/register.jsp">Registro</a></li>      			
+            			<li><a href="login">Accede</a></li> 
+            			<li><a href="usuario">Registro</a></li>      			
           			</ul>
         		</div><!--/.nav-collapse -->
       		</div>
@@ -87,19 +87,19 @@
 
  
 <div class="container">
-	<form class="form-signin" name="registro" action="../usuario" method="post" id="idFormRegister" role="form" data-toggle="validator" >
+	<form class="form-signin" name="registro" action="usuario" method="post" id="idFormRegister" role="form" data-toggle="validator" >
 		<h2 class="form-signin-heading">Formulario de registro</h2>	
 			<div class="form-group has-feedback">
-				<label for="labelNombreRegistro" class="control-label">Nombre</label>
-				<input type="text" name="nombreRegistro" class="form-control" id="idNombreRegistro"	pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,30}$" autocomplete="off" onkeyup="comprobarEspacios()" data-error="Error. El nombre introducido no es válido" required/>		
+				<label for="labelNombreRegistro" class="control-label">* Nombre</label>
+				<input type="text" name="nombreRegistro" class="form-control" id="idNombreRegistro"	pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,30}$" data-error="El nombre introducido no es válido" required/>		
 				<span class="glyphicon form-control-feedback"></span>
 				<div class="help-block with-errors" id="one"></div>
 			</div>
 			
 			
 			<div class="form-group has-feedback">
-				<label for="labelApellidosRegistro" class="control-label">Apellidos</label>
-				<input type="text" name="apellidosRegistro" class="form-control" id="idApellidosRegistro" pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,30}$" autocomplete="off" data-error="Error. El apellido introducido no es válido" required/>				
+				<label for="labelApellidosRegistro" class="control-label">* Apellidos</label>
+				<input type="text" name="apellidosRegistro" class="form-control" id="idApellidosRegistro" pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-]{2,30}$" data-error="El apellido introducido no es válido" required/>				
 				<span class="glyphicon form-control-feedback"></span>
 				<div class="help-block with-errors"></div>
 			</div>
@@ -108,24 +108,24 @@
 			<div style="height: 30px;"></div>
 			<p id="info1">Datos de la cuenta</p>
 			<div class="form-group has-feedback">			
-				<label for="labelEmailRegistro" class="control-label">E-mail</label>
+				<label for="labelEmailRegistro" class="control-label">* E-mail</label>
 				<input type="email" name="emailRegistro" class="form-control" id="idEmailRegistro" 
 				pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$" 
-				data-error="El E-mail introducido no es válido" autocomplete="off" required/>
+				data-error="El E-mail introducido no es válido" required/>
 				<span class="glyphicon form-control-feedback"></span>								
 				<div class="help-block with-errors"></div>
 			</div>
 			
 			
 			<div class="form-group has-feedback">
-				<label for="labelPasswordRegistro" class="control-label">Contraseña</label>
+				<label for="labelPasswordRegistro" class="control-label">* Contraseña</label>
 				<input type="password" name="passwordRegistro" class="form-control" id="idPasswordRegistro" data-error="La contraseña debe tener mínimo 2 caracteres" minlength="2" maxlength="20" autocomplete="off" oncopy="return false" onpaste="return false" required/>
 				<span class="glyphicon form-control-feedback"></span>
 				<div class="help-block with-errors"></div>
 			</div>
 			
 			<div class="form-group has-feedback">
-				<label for="labelConfirmPasswordRegistro" class="control-label">Repita la contraseña</label>
+				<label for="labelConfirmPasswordRegistro" class="control-label">* Repita la contraseña</label>
 				<input type="password" name="confirmPasswordRegistro" class="form-control" id="idConfirmPasswordRegistro" data-match="#idPasswordRegistro" data-match-error="La contraseña no coincide" minlength="2" maxlength="20" autocomplete="off" oncopy="return false" onpaste="return false" required/>							
 				<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 				<div class="help-block with-errors"></div>
@@ -133,7 +133,7 @@
 			
 				
 			<div>
-			<input type="hidden" name="user_type" class="form-control" value="1"/>
+			<input type="hidden" name="user_type" class="form-control" value="1"/><!-- 0:Admin 1:user -->
 			</div>
 			
 			
@@ -142,7 +142,7 @@
 			</div>
 			<p class="form-group">Al continuar aceptas el Uso del servicio, las Condiciones de uso y la Política de privacidad</p>
 			<hr>
-			<p id="info">¿Ya tienes una cuenta? <a href="login.jsp">Entra</a></p>
+			<p id="info">¿Ya tienes una cuenta? <a href="login">Entra</a></p>
 	
 	
 	

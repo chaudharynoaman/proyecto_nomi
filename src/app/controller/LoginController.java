@@ -25,19 +25,48 @@ public class LoginController extends HttpServlet {
 		
 		Usuario usu = new LoginModel().getUsuario(emailLogin, passwordLogin);
 		
-		//System.out.println(usu.getNombre());
-		
-		if (usu != null) {
-			HttpSession sesion = request.getSession(true);
-			sesion.setAttribute("nombreUsuarioConectado", emailLogin);
 			
-			response.sendRedirect("view/loggedUser.jsp");
+		
+		if(usu==null){
+			request.getRequestDispatcher("view/errorLogin.jsp").forward(request, response);
+		}
+		
+		if ((usu.getEmail()).equals(emailLogin) && (usu.getPassword()).equals(passwordLogin)) {
+			
+			HttpSession sesion = request.getSession(true);
+			sesion.setAttribute("emailUsuarioConectado", emailLogin);	
+			
+			String nombreUsuarioConectado = usu.getNombre();
+			String apellidosUsuarioConectado = usu.getApellidos();
+			
+			sesion.setAttribute("nombreUsuConectado", nombreUsuarioConectado);
+			sesion.setAttribute("apellidosUsuConectado", apellidosUsuarioConectado);
+			
+			//request.getRequestDispatcher("view/loggedUser.jsp").forward(request, response);
+			
+			int user_type = usu.getUser_type();
+			
+			
+			if(user_type==0){
+				request.getRequestDispatcher("view/adminUser.jsp").forward(request, response);
+			}
+			else{
+				request.getRequestDispatcher("view/normalUser.jsp").forward(request, response);
+			}
+			
+			
+			
 		} 
 		else {
-			response.sendRedirect("view/login.jsp");
+			//response.sendRedirect("view/errorLogin.jsp");usu != null
+			request.getRequestDispatcher("view/errorLogin.jsp").forward(request, response);
 		}
 		
 	}
 	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException	{
+		request.getRequestDispatcher("view/login.jsp").forward(request, response);
+	
+	}	
 
 }

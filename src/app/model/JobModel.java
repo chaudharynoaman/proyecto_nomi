@@ -6,7 +6,6 @@ import org.hibernate.Transaction;
 import org.mvc.Model;
 
 import app.bean.Job;
-import app.bean.Usuario;
 
 public class JobModel extends Model {
 	public void crearTrabajo(Job trabajo) {		
@@ -16,15 +15,15 @@ public class JobModel extends Model {
 		ss.close();				
 	}
 	
-	@SuppressWarnings("unchecked")
-	public List<Job>getTodos(){
-		List<Job>empleos = ss.createQuery("from Job").list();
-		ss.close();
-		if (empleos.isEmpty()) {
-			return null;
-		} else {
-			return (List<Job>) empleos.get(0);
-		}
-	}
+	@SuppressWarnings({ "unchecked" })
+	public List<Job> getTodos(){
+		List<Job> job = ss.createQuery("from Job order by fechapublicacion desc").getResultList();
+		ss.close();				
+		return job;		
+	}	
+		
+		
+		
+	
 
 }
