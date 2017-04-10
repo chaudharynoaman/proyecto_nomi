@@ -21,9 +21,5 @@ public class JobModel extends Model {
 		ss.close();				
 		return job;		
 	}	
-		
-		
-		
-	
 
 }

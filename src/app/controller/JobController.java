@@ -52,7 +52,8 @@ public class JobController extends HttpServlet {
 
 
 		request.getRequestDispatcher("view/jobs.jsp").forward(request, response);
-//		response.sendRedirect("view/jobs.jsp");
-}
+		//		response.sendRedirect("view/jobs.jsp");
+	}
+
 
 }
