@@ -20,12 +20,9 @@ public class LoginController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String emailLogin = request.getParameter("emailLogin");
-		String passwordLogin = request.getParameter("passwordLogin");		
+		String passwordLogin = request.getParameter("passwordLogin");				
 		
-		
-		Usuario usu = new LoginModel().getUsuario(emailLogin, passwordLogin);
-		
-			
+		Usuario usu = new LoginModel().getUsuario(emailLogin, passwordLogin);					
 		
 		if(usu==null){
 			request.getRequestDispatcher("view/errorLogin.jsp").forward(request, response);
@@ -44,21 +41,17 @@ public class LoginController extends HttpServlet {
 			
 			//request.getRequestDispatcher("view/loggedUser.jsp").forward(request, response);
 			
-			int user_type = usu.getUser_type();
-			
+			int user_type = usu.getUser_type();			
 			
 			if(user_type==0){
 				request.getRequestDispatcher("view/adminUser.jsp").forward(request, response);
 			}
 			else{
 				request.getRequestDispatcher("view/normalUser.jsp").forward(request, response);
-			}
-			
-			
+			}			
 			
 		} 
-		else {
-			//response.sendRedirect("view/errorLogin.jsp");usu != null
+		else {			
 			request.getRequestDispatcher("view/errorLogin.jsp").forward(request, response);
 		}
 		

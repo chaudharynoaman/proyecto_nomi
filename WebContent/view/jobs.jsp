@@ -41,7 +41,7 @@
     	<link rel="stylesheet" type="text/css" href="css/register.css"> 
     
 		<style>
-			#lista-empleos{
+			.lista-empleos{
 				background:#F2F2F2;		
 				padding:10px;
 				margin-bottom:20px;
@@ -95,7 +95,7 @@
 	            	<span class="icon-bar"></span>
 	            	<span class="icon-bar"></span>
 	          		</button>
-          			<a class="navbar-brand" href="index.jsp"><span class="mainlogo">SLACK;</span></a>
+          			<a class="navbar-brand" href="home"><span class="mainlogo">SLACK;</span></a>
         		</div>
 
         		<!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -124,16 +124,13 @@
 		
 			<c:forEach var="job" items="${jobs}">
 			
-			<div id="lista-empleos">
+				<div id="${job.id}" class="lista-empleos">				
+						<a href="jobDetail?id=${job.id}&name=${job.titulo}"><h3> ${job.titulo} </h3></a>
+						<p> ${job.ciudad} | ${job.fechapublicacion}</p>
+						<p>${job.descripcion}</p>
+						<p>${job.estudiosminimos} | Contrato ${job.tipocontrato} | Jornada ${job.tipojornada}</p>						
+				</div>	
 				
-					<h3> ${job.titulo} </h3>
-					<p> ${job.ciudad} | ${job.fechapublicacion}</p>
-					<p>${job.descripcion}</p>
-					<p>${job.estudiosminimos} | Contrato ${job.tipocontrato} | Jornada ${job.tipojornada}</p>
-					
-					
-			</div>	
-			
 			</c:forEach>
 		
 		

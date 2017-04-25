@@ -21,5 +21,15 @@ public class JobModel extends Model {
 		ss.close();				
 		return job;		
 	}	
+	
+	
+	@SuppressWarnings("unchecked")
+	public List<Job> getJobDetail(int idDetalleTrabajo){		
+		List<Job> tra = ss.createQuery("from Job where id='" + idDetalleTrabajo + "'").getResultList();// where id='" + id + "'"
+		ss.close();				
+		return tra;		
+	}	
+	
+	
 
 }

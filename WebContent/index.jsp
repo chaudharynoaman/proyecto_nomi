@@ -5,7 +5,7 @@
 <html>
 
   	<head>
-  		<title>Slack | Home</title>  
+  		<title>Slack | Home nuevo</title>  
 
 		<meta charset="utf-8">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +60,7 @@
 	            	<span class="icon-bar"></span>
 	            	<span class="icon-bar"></span>
 	          		</button>
-          			<a class="navbar-brand" href="index.jsp"><span class="mainlogo">SLACK;</span></a>
+          			<a class="navbar-brand" href="home"><span class="mainlogo">SLACK;</span></a>
         		</div>
 
         		<!-- Agrupar los enlaces de navegación, los formularios y cualquier

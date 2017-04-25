@@ -89,7 +89,7 @@
 					
 				<div class="form-group">
 					<label for="labelEmail" class="etiqueta">E-mail</label>
-					<input type="email" name="emailLogin" class="form-control" id="idEmailLogin" oncopy="return false" onpaste="return false" required/>
+					<input type="email" name="emailLogin" class="form-control" id="idEmailLogin" required/>
 				</div>
 				
 				<div class="form-group">
