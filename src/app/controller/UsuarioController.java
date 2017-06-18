@@ -2,6 +2,8 @@ package app.controller;
 
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,24 +26,31 @@ public class UsuarioController extends HttpServlet {
 		String apellidosRegistro = request.getParameter("apellidosRegistro").trim();		
 		String emailRegistro = request.getParameter("emailRegistro").trim();
 		String passwordRegistro = request.getParameter("confirmPasswordRegistro").trim();
-		int user_type = Integer.parseInt(request.getParameter("user_type"));	
+		int user_type = Integer.parseInt(request.getParameter("user_type"));
+		int activo = Integer.parseInt(request.getParameter("activo"));
 		
 				
-		Usuario usu = new Usuario(nombreRegistro, apellidosRegistro, emailRegistro, passwordRegistro, user_type);
+		Usuario usu = new Usuario(nombreRegistro, apellidosRegistro, emailRegistro, passwordRegistro, user_type, activo);
 		
 		boolean usuarioCreado = new UsuarioModel().crearUsuario(usu);
 		
-		System.out.println("usuario creado: " + usuarioCreado);
+		//System.out.println("usuario creado: " + usuarioCreado);
 		
 		if(usuarioCreado){
 			HttpSession sesion = request.getSession(true);
-			sesion.setAttribute("nombreUsuario", nombreRegistro);
+			sesion.setAttribute("nombreUsuario", nombreRegistro);			
+			//request.getRequestDispatcher("view/registrationOk.jsp").forward(request, response);
 			
-			request.getRequestDispatcher("view/registrationOk.jsp").forward(request, response);
+    		response.sendRedirect(request.getContextPath() + "/home");//redirijo a /home una vez creado el usuario
+
+
 			
 		}
 		else{
-			request.getRequestDispatcher("view/registrationError.jsp").forward(request, response); 
+			//request.getRequestDispatcher("view/registrationError.jsp").forward(request, response); 
+			request.setAttribute("CreateUserErrorMessage", "Se ha producido un error en el registro. Inténtalo de nuevo.");
+			RequestDispatcher rd=request.getRequestDispatcher("view/register.jsp");            
+			rd.include(request, response);
 		}
 		
 		

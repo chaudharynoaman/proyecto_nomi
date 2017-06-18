@@ -1,0 +1,19 @@
+.lista-candidaturas{
+	background:#F5F5F5;		
+	padding:10px;
+	margin-bottom:20px;		
+}
+
+a{
+	text-decoration:none;
+}
+
+#idLista-Mis-Candidaturas{
+	max-width:800px;
+	margin-top:30px;		
+}
+
+#idCandidaturas-Container{
+	padding-top:100px;
+	padding-bottom:60px;
+}

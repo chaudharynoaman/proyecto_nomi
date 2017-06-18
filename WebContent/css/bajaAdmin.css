@@ -1,0 +1,21 @@
+#idBaja-Admin-Container{	
+	padding-top:100px;
+	padding-bottom:60px;		
+	
+}
+
+#idSubmit-Baja-Admin{
+	border-radius: 2px;
+	font-weight: bold;
+	max-width:180px;
+	margin-top:30px;
+}
+
+#baja-admin-heading{
+	font-size:18px;
+	margin-bottom:30px;
+}
+
+#idEmailAdminBaja{
+	max-width:380px;
+}

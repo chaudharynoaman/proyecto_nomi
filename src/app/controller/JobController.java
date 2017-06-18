@@ -19,7 +19,7 @@ import app.model.JobModel;
 public class JobController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		String titulo = request.getParameter("tituloTrabajo");
+		/*String titulo = request.getParameter("tituloTrabajo");
 		String ciudad = request.getParameter("ciudadTrabajo");		
 		String fechaPubl = request.getParameter("fechaTrabajo");
 		String descrip = request.getParameter("descripcionTrabajo");
@@ -34,14 +34,13 @@ public class JobController extends HttpServlet {
 		new JobModel().crearTrabajo(trabajo);
 		
 		if (trabajo != null) {
-			response.sendRedirect("view/jobCreate.jsp");
-		}		
+			//response.sendRedirect("view/jobCreate.jsp");
+			request.getRequestDispatcher("view/jobCreate.jsp").forward(request, response);
+		}	*/	
 		
 	}
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException	{
-		
-		//response.getWriter().println("<h1>JOBS</h1>");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException	{		
 		
 		List<Job> jobs = new JobModel().getTodos();
 		for (Job job : jobs) {
@@ -52,7 +51,6 @@ public class JobController extends HttpServlet {
 
 
 		request.getRequestDispatcher("view/jobs.jsp").forward(request, response);
-		//		response.sendRedirect("view/jobs.jsp");
 	}
 
 

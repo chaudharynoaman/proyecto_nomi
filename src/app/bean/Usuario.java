@@ -1,8 +1,12 @@
 package app.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Usuario {
@@ -11,8 +15,23 @@ public class Usuario {
 	private String apellidos;
 	private String email;
 	private String password;
-	private int user_type;	
+	private int user_type;
+	private int activo;
 	
+	private List<Inscripcion> inscripciones = new ArrayList<Inscripcion>();
+	
+	@OneToMany(mappedBy="usuario")
+	public List<Inscripcion> getInscripciones() {
+		return inscripciones;
+	}
+	public void setInscripciones(List<Inscripcion> inscripciones) {
+		this.inscripciones = inscripciones;
+	}
+	
+	//nuevo
+	public void setInscripcion(Inscripcion inscripcion){
+		this.inscripciones.add(inscripcion);
+	}	
 	
 	@Id
 	@GeneratedValue	
@@ -52,21 +71,25 @@ public class Usuario {
 	public void setUser_type(int user_type) {
 		this.user_type = user_type;
 	}
-	public Usuario(String nombre, String apellidos, String email, String password, int user_type){
+	public int getActivo() {
+		return activo;
+	}
+	public void setActivo(int activo) {
+		this.activo = activo;
+	}
+	
+	public Usuario(String nombre, String apellidos, String email, String password, int user_type, int activo){
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.email = email;
 		this.password = password;
-		this.user_type = user_type;		
+		this.user_type = user_type;	
+		this.activo = activo;
 	}
 	
 	public Usuario(){
 		
-	}
+	}	
 	
-	
-	
-
-
 
 }

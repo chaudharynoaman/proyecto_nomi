@@ -1,0 +1,38 @@
+.job-detail-labels{
+	font-size:18px;	
+	font-weight: bold;
+}
+
+.job-detail-format{
+	white-space: pre-wrap;
+}
+
+#idJob-Detail-Container{
+	margin-top: 80px;
+	max-width:800px;
+	margin-left:45px;	
+}
+
+#idTitulo-Job-Detail{
+	font-size:28px;		
+	font-weight: bold;
+}
+
+#idForm-Subida-Cv{
+	padding-top: 30px;
+}
+
+#idSubidaCurriculum{
+	border-radius: 2px;
+	font-weight: bold;	
+	margin-top:30px;
+	
+}
+
+#idSubmit-Inscripcion{
+	border-radius: 2px;
+	font-weight: bold;
+	max-width:280px;
+	margin-top:30px;
+	
+}

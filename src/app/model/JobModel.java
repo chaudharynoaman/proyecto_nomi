@@ -7,6 +7,7 @@ import org.mvc.Model;
 
 import app.bean.Job;
 
+
 public class JobModel extends Model {
 	public void crearTrabajo(Job trabajo) {		
 		Transaction t = ss.beginTransaction();        
@@ -17,18 +18,23 @@ public class JobModel extends Model {
 	
 	@SuppressWarnings({ "unchecked" })
 	public List<Job> getTodos(){
-		List<Job> job = ss.createQuery("from Job order by fechapublicacion desc").getResultList();
+		List<Job> job = ss.createQuery("from Job where activo = 1 order by fechapublicacion desc").getResultList();
 		ss.close();				
 		return job;		
 	}	
 	
 	
 	@SuppressWarnings("unchecked")
-	public List<Job> getJobDetail(int idDetalleTrabajo){		
+	public Job getJobDetail(long idDetalleTrabajo){		
 		List<Job> tra = ss.createQuery("from Job where id='" + idDetalleTrabajo + "'").getResultList();// where id='" + id + "'"
 		ss.close();				
-		return tra;		
+		return tra.get(0);		
 	}	
+	
+	
+	public Job getJobdByid(Long id) {
+		return (Job)ss.get(Job.class,id);
+	}
 	
 	
 

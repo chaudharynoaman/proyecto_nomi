@@ -36,6 +36,11 @@ public class UsuarioModel extends Model {
 		ss.close();
 		return usuarios;
 	}
+	
+	
+	public Usuario getUsuariodByid(Long id) {
+		return (Usuario)ss.get(Usuario.class,id);
+	}
 
 	
 }

@@ -1,14 +1,16 @@
 package app.controller;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import app.bean.Inscripcion;
 import app.bean.Job;
+import app.model.InscripcionModel;
 import app.model.JobModel;
 
 /**
@@ -26,14 +28,26 @@ public class JobDetailController extends HttpServlet {
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException	{		
-		int identificadorTrabajo = Integer.parseInt(request.getParameter("id"));		
-		List<Job> jobs = new JobModel().getJobDetail(identificadorTrabajo);
-		for (Job job : jobs) {
-			response.getWriter().println(job.getTitulo());
+		long identificadorTrabajo = Long.parseLong(request.getParameter("id"));		
+		Job job = new JobModel().getJobDetail(identificadorTrabajo);
+		request.setAttribute("job", job);
+		
+		HttpSession sesion = request.getSession(true);
+		Long idUsuarioConectado = (Long) sesion.getAttribute("idUsuarioConectado");
+		
+		if (idUsuarioConectado == null) {
+			request.setAttribute("yainscrito", false);
 		}
-		
-		request.setAttribute("jobs", jobs);		
-		
+		else {
+			Inscripcion inscripcion = new InscripcionModel().getInscripcion(identificadorTrabajo, idUsuarioConectado);
+			
+			if (inscripcion == null) {
+				request.setAttribute("yainscrito", false);
+			}else {
+				request.setAttribute("yainscrito", true);
+			}
+		}
+
 		request.getRequestDispatcher("view/jobDetail.jsp").forward(request, response);
 	}
 

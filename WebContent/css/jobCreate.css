@@ -1,0 +1,27 @@
+#idSubmit-Job-Create{
+	border-radius: 2px;
+	font-weight: bold;
+	max-width:280px;
+	margin-top:30px;
+}
+
+#idFormJobCreate{
+	padding-top:100px;
+	padding-bottom:60px;
+	margin-left:100px;
+	/*max-width: 450px;	*/
+	/*margin:0 auto;*/
+	/*margin-left:100px;*/
+}
+
+
+#idTituloTrabajo, #idCiudadTrabajo, #idFechaTrabajo, #idEstudiosMinimosTrabajo, #idExperienciaMinimaTrabajo,  #idTipoJornadaTrabajo, #idTipoContratoTrabajo {
+	border-radius:0px;
+	max-width: 450px;
+}
+
+#idDescripcionTrabajo, #idRequisitosMinimosTrabajo{
+	border-radius:0px;	
+	max-width: 650px;
+  	height: 225px;
+}
