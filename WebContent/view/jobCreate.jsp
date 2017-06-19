@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -11,7 +10,7 @@
 <html>
 <head>
 <title>Nimbu| Publicar Nuevo Empleo</title> 
-		<meta charset="UTF-8"> 		
+		<meta charset="ISO-8859-1"> 		
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,8 +26,7 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-		<link rel="icon" href="http://www.altran.es/fileadmin/templates/main/img/altran/favicon.ico" type="image/x-ico; charset=binary" />
-		
+		<link rel="icon" href="../images/favicon.png" type="image/x-ico; charset=binary" />		
 		
 		<!-- External fonts -->    
     	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -95,10 +93,10 @@ $( document ).ready(function() {
 			    }
 			  },
 			  "content": {
-			    "message": "Este sitio utiliza cookies para ofrecerle un servicio mÃ¡s rÃ¡pido y personalizado. Al acceder a esta pÃ¡gina consideramos que acepta su uso. Puede obtener mÃ¡s informaciÃ³n",
+			    "message": "Este sitio utiliza cookies para ofrecerle un servicio más rápido y personalizado. Al acceder a esta página consideramos que acepta su uso. Puede obtener más información",
 			    "dismiss": "Aceptar",
-			    "link": "aquÃ­.",
-			    "href": "cookies.jsp"
+			    "link": "aquí.",
+			    "href": "../cookies"
 			  }
 			})});
 		</script>	
@@ -116,8 +114,8 @@ $( document ).ready(function() {
 		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<!-- <div class="container-fluid">	-->	
 	      		<div class="container">
-	      		 	<!-- El logotipo y el icono que despliega el menÃº se agrupan
-	       				 para mostrarlos mejor en los dispositivos mÃ³viles -->
+	      		 	<!-- El logotipo y el icono que despliega el menú se agrupan
+	       				 para mostrarlos mejor en los dispositivos móviles -->
 	       			<div class="navbar-header">       				
 		          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 		           		<span class="sr-only">Toggle navigation</span>
@@ -131,7 +129,7 @@ $( document ).ready(function() {
 	          			
 	        		</div>
 	
-	        		<!-- Agrupar los enlaces de navegaciÃ³n, los formularios y cualquier
+	        		<!-- Agrupar los enlaces de navegación, los formularios y cualquier
 	       				 otro elemento que se pueda ocultar al minimizar la barra -->
 	        		<div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">  
 	          			<ul class="nav navbar-nav" id="menu-items">
@@ -155,8 +153,8 @@ $( document ).ready(function() {
 			<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<!-- <div class="container-fluid">-->		
 		      		<div class="container">
-		      		 	<!-- El logotipo y el icono que despliega el menÃº se agrupan
-		       				 para mostrarlos mejor en los dispositivos mÃ³viles -->
+		      		 	<!-- El logotipo y el icono que despliega el menú se agrupan
+		       				 para mostrarlos mejor en los dispositivos móviles -->
 		       			<div class="navbar-header">       				
 			          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			           		<span class="sr-only">Toggle navigation</span>
@@ -169,7 +167,7 @@ $( document ).ready(function() {
 			          		</div>
 		        		</div>
 		
-		        		<!-- Agrupar los enlaces de navegaciÃ³n, los formularios y cualquier
+		        		<!-- Agrupar los enlaces de navegación, los formularios y cualquier
 		       				 otro elemento que se pueda ocultar al minimizar la barra -->
 		        		<div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">  
 		          			<ul class="nav navbar-nav" id="menu-items">
@@ -188,13 +186,13 @@ $( document ).ready(function() {
 			            				<li><a href="perfil">Mi Perfil</a></li>
 				        				<li><a href="candidaturas">Mis Candidaturas</a></li>
 				        				<!-- <li><a href="cambioemail">Cambiar E-mail</a></li>-->
-				        				<li><a href="cambiopassword">Cambiar ContraseÃ±a</a></li>
+				        				<li><a href="cambiopassword">Cambiar Contraseña</a></li>
 				        				<li><a href="#" data-toggle="modal" data-target="#myModal">Cancelar Cuenta</a></li>
 		            				</ul> 	            				
 		            				            			
 		            			</li>
 		            			
-		            			<li><a href="../logout">Cerrar SesiÃ³n</a></li>      			
+		            			<li><a href="../logout">Cerrar Sesión</a></li>      			
 		          			</ul>
 		        		</div>
 		      		</div>
@@ -206,11 +204,11 @@ $( document ).ready(function() {
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="myModalLabel">CancelaciÃ³n de Cuenta</h4>
+							<h4 class="modal-title" id="myModalLabel">Cancelación de Cuenta</h4>
 						</div>
 						<div class="modal-body">
-							<p>Â¿Realmente deseas cancelar tu cuenta?</p>
-							<p>Esta operaciÃ³n es irreversible</p>
+							<p>¿Realmente deseas cancelar tu cuenta?</p>
+							<p>Esta operación es irreversible</p>
 						</div>
 						<div class="modal-footer">
 							<form name="form-cancel-account" action="personal/cancelarcuenta" method="post">
@@ -230,8 +228,8 @@ $( document ).ready(function() {
 			<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<!-- <div class="container-fluid">	-->	
 		      		<div class="container">
-		      		 	<!-- El logotipo y el icono que despliega el menÃº se agrupan
-		       				 para mostrarlos mejor en los dispositivos mÃ³viles -->
+		      		 	<!-- El logotipo y el icono que despliega el menú se agrupan
+		       				 para mostrarlos mejor en los dispositivos móviles -->
 		       			<div class="navbar-header">       				
 			          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			           		<span class="sr-only">Toggle navigation</span>
@@ -245,7 +243,7 @@ $( document ).ready(function() {
 		          			
 		        		</div>
 		
-		        		<!-- Agrupar los enlaces de navegaciÃ³n, los formularios y cualquier
+		        		<!-- Agrupar los enlaces de navegación, los formularios y cualquier
 		       				 otro elemento que se pueda ocultar al minimizar la barra -->
 		        		<div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">  
 		          			<!-- <ul class="nav navbar-nav" id="menu-items">
@@ -256,7 +254,7 @@ $( document ).ready(function() {
 		            		</ul> -->
 		            		<ul class="nav navbar-nav navbar-right" id="menu-items">
 		            			<li><a href="../home">${nombreUsuConectado} </a></li> 
-		            			<li><a href="../logout">Cerrar SesiÃ³n</a></li>      			
+		            			<li><a href="../logout">Cerrar Sesión</a></li>      			
 		          			</ul>
 		        		</div>
 		      		</div>
@@ -264,7 +262,7 @@ $( document ).ready(function() {
 			</nav>
 			
 			<!-- <div class="container" style="margin-top: 80px">
-			<h2>PÃ¡gina de Administrador</h2>
+			<h2>Página de Administrador</h2>
 			
 			<table class="table table-bordered" id="idTabla">
 				<tr>
@@ -297,10 +295,10 @@ $( document ).ready(function() {
 				<h2 class="form-signin-heading">Publicar Nuevo Empleo</h2>
 									
 				<div class="form-group has-feedback">
-					<label for="labelTituloTrabajo" class="control-label">* TÃ­tulo del Empleo</label>
+					<label for="labelTituloTrabajo" class="control-label">* Título del Empleo</label>
 					<input type="text" name="tituloTrabajo" class="form-control" id="idTituloTrabajo"	
-					pattern="^[a-zA-Z ÃÃ‰ÃÃ“ÃšÃ¡Ã©Ã­Ã³ÃºÃ±Ã‘-]{2,30}$" 
-					data-error="Introduce un tÃ­tulo vÃ¡lido" required/>		
+					pattern="^[a-zA-Z ÁÉÍÓÚáéíóúñÑ-.]{2,60}$" 
+					data-error="Introduce un título válido" required/>		
 					<!-- <span class="glyphicon form-control-feedback"></span>-->
 					<div class="help-block with-errors"></div>
 				</div>				
@@ -319,58 +317,58 @@ $( document ).ready(function() {
 				</div>
 				
 				<div class="form-group has-feedback">
-					<label for="labelFecha" class="etiqueta">* Fecha de publicaciÃ³n</label>
+					<label for="labelFecha" class="etiqueta">* Fecha de publicación</label>
 					<input type="text" name="fechaTrabajo" class="form-control" id="idFechaTrabajo" 
-					data-error="Introduce una fecha vÃ¡lida" required/>
+					data-error="Introduce una fecha válida" required/>
 					<!-- <span class="glyphicon form-control-feedback"></span>-->
 					<div class="help-block with-errors"></div>
 				</div>
 	
 				<div class="form-group has-feedback">
-					<label for="labelDescripcion" class="etiqueta">* DescripciÃ³n</label>
+					<label for="labelDescripcion" class="etiqueta">* Descripción</label>
 					
 					<textarea rows="7" cols="20" name="descripcionTrabajo" class="form-control" id="idDescripcionTrabajo" 
-					data-error="Introduce una descripciÃ³n vÃ¡lida" required></textarea>
+					data-error="Introduce una descripción válida" required></textarea>
 					<!-- <span class="glyphicon form-control-feedback"></span>-->
 					<div class="help-block with-errors"></div>					
 				</div>
 				
 				<div class="form-group">
-					<label for="labelEstudiosMinimos" class="etiqueta">* Estudios mÃ­nimos</label>
+					<label for="labelEstudiosMinimos" class="etiqueta">* Estudios mínimos</label>
 					<!-- <input type="text" name="estudiosMinimosTrabajo" class="form-control" id="idEstudiosMinimosTrabajo" required/>-->								
 						<select name="estudiosMinimosTrabajo" id="idEstudiosMinimosTrabajo" class="form-control" required>
-							<option value="EducaciÃ³n Secundaria Obligatoria">EducaciÃ³n Secundaria Obligatoria</option>					
-							<option value="FormaciÃ³n Profesional Grado Medio">FormaciÃ³n Profesional Grado Medio</option>
+							<option value="Educación Secundaria Obligatoria">Educación Secundaria Obligatoria</option>					
+							<option value="Formación Profesional Grado Medio">Formación Profesional Grado Medio</option>
 							<option value="Bachillerato">Bachillerato</option>
-							<option value="FormaciÃ³n Profesional Grado Superior">FormaciÃ³n Profesional Grado Superior</option>
+							<option value="Formación Profesional Grado Superior">Formación Profesional Grado Superior</option>
 							<option value="Diplomado">Diplomado</option>					
-							<option value="Ingeniero TÃ©cnico">Ingeniero TÃ©cnico</option>
+							<option value="Ingeniero Técnico">Ingeniero Técnico</option>
 							<option value="Grado">Grado</option>
 							<option value="Licenciado">Licenciado</option>
 							<option value="Ingeniero Superior">Ingeniero Superior</option>
 							<option value="Postgrado">Postgrado</option>
-							<option value="MÃ¡ster">MÃ¡ster</option>
+							<option value="Máster">Máster</option>
 							<option value="Doctorado">Doctorado</option>				
 						</select>
 				</div>				
 				
 				<div class="form-group">
-					<label for="labelExperienciaMinima" class="etiqueta">* Experiencia mÃ­nima</label>
+					<label for="labelExperienciaMinima" class="etiqueta">* Experiencia mínima</label>
 					<!-- <input type="text" name="experienciaMinimaTrabajo" class="form-control" id="idExperienciaMinimaTrabajo" required/>-->				
 						<select name="experienciaMinimaTrabajo" id="idExperienciaMinimaTrabajo" class="form-control" required>
 							<option value="No requerida">No requerida</option>					
-							<option value="Al menos 1 aÃ±o">Al menos 1 aÃ±o</option>
-							<option value="Al menos 2 aÃ±os">Al menos 2 aÃ±os</option>
-							<option value="Al menos 3 aÃ±os">Al menos 3 aÃ±os</option>
-							<option value="Al menos 4 aÃ±os">Al menos 4 aÃ±os</option>
-							<option value="MÃ¡s de 4 aÃ±os">MÃ¡s de 4 aÃ±os</option>											
+							<option value="Al menos 1 año">Al menos 1 año</option>
+							<option value="Al menos 2 años">Al menos 2 años</option>
+							<option value="Al menos 3 años">Al menos 3 años</option>
+							<option value="Al menos 4 años">Al menos 4 años</option>
+							<option value="Más de 4 años">Más de 4 años</option>											
 						</select>
 				</div>				
 				
 				<div class="form-group has-feedback">
-					<label for="labelRequisitosMinimos" class="etiqueta">* Requisitos mÃ­nimos</label>
+					<label for="labelRequisitosMinimos" class="etiqueta">* Requisitos mínimos</label>
 					<textarea rows="7" cols="20" name="requisitosMinimosTrabajo" class="form-control" 
-					id="idRequisitosMinimosTrabajo" data-error="Introduce unos requisitos mÃ­nimos vÃ¡lidos" required></textarea>
+					id="idRequisitosMinimosTrabajo" data-error="Introduce unos requisitos mínimos válidos" required></textarea>
 					<!-- <span class="glyphicon form-control-feedback"></span>-->
 					<div class="help-block with-errors"></div>
 				</div>
@@ -380,7 +378,7 @@ $( document ).ready(function() {
 					<!-- <input type="text" name="tipoJornadaTrabajo" class="form-control" id="idTipoJornadaTrabajo" required/>	-->			
 						<select name="tipoJornadaTrabajo" id="idTipoJornadaTrabajo" class="form-control" required>
 							<option value="Completa">Completa</option>					
-							<option value="Parcial - MaÃ±ana">Parcial - MaÃ±ana</option>
+							<option value="Parcial - Mañana">Parcial - Mañana</option>
 							<option value="Parcial - Tarde">Parcial - Tarde</option>																		
 						</select>				
 				</div>				
@@ -391,11 +389,11 @@ $( document ).ready(function() {
 					<!-- <input type="text" name="tipoContratoTrabajo" class="form-control" id="idTipoContratoTrabajo" required/>-->				
 						<select name="tipoContratoTrabajo" id="idTipoContratoTrabajo" class="form-control" required>
 							<option value="Indefinido">Indefinido</option>					
-							<option value="De duraciÃ³n determinada">De duraciÃ³n determinada</option>
+							<option value="De duración determinada">De duración determinada</option>
 							<option value="A tiempo parcial">A tiempo parcial</option>
 							<option value="Formativo">Formativo</option>
 							<option value="Otros contratos">Otros contratos</option>
-							<option value="AutÃ³nomo">AutÃ³nomo</option>																		
+							<option value="Autónomo">Autónomo</option>																		
 						</select>				
 				</div>				
 				
@@ -426,9 +424,9 @@ $( document ).ready(function() {
 			<h3>NIMBU</h3>			
 			<p class="footer-links">
 				<a href="../legal">Aviso Legal</a>			    
-			    Â·
-			    <a href="../cookies">PolÃ­tica de cookies</a>
-			    Â·
+			    ·
+			    <a href="../cookies">Política de cookies</a>
+			    ·
 			    <a href="../contacto">Contacto</a>
 			</p>			
 			<p class="footer-company-name">&copy; 2017 NIMBU</p>

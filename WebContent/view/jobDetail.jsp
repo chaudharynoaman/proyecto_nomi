@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -15,7 +14,7 @@
 <head>
   	<title>Oferta de empleo: ${param.name} | Nimbu</title>  
 
-		<meta charset="UTF-8">
+		<meta charset="ISO-8859-1">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -33,8 +32,7 @@
 
 		
 
-		<link rel="icon" href="http://www.altran.es/fileadmin/templates/main/img/altran/favicon.ico" type="image/x-ico; charset=binary" />
-		
+		<link rel="icon" href="images/favicon.png" type="image/x-ico; charset=binary" />		
 		
 		<!-- External fonts -->    
     	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -75,10 +73,10 @@
 			    }
 			  },
 			  "content": {
-			    "message": "Este sitio utiliza cookies para ofrecerle un servicio mÃ¡s rÃ¡pido y personalizado. Al acceder a esta pÃ¡gina consideramos que acepta su uso. Puede obtener mÃ¡s informaciÃ³n",
+			    "message": "Este sitio utiliza cookies para ofrecerle un servicio más rápido y personalizado. Al acceder a esta página consideramos que acepta su uso. Puede obtener más información",
 			    "dismiss": "Aceptar",
-			    "link": "aquÃ­.",
-			    "href": "cookies.jsp"
+			    "link": "aquí.",
+			    "href": "cookies"
 			  }
 			})});
 		</script>	
@@ -92,8 +90,8 @@
 		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<!-- <div class="container-fluid">	-->	
 	      		<div class="container">
-	      		 	<!-- El logotipo y el icono que despliega el menÃº se agrupan
-	       				 para mostrarlos mejor en los dispositivos mÃ³viles -->
+	      		 	<!-- El logotipo y el icono que despliega el menú se agrupan
+	       				 para mostrarlos mejor en los dispositivos móviles -->
 	       			<div class="navbar-header">       				
 		          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 		           		<span class="sr-only">Toggle navigation</span>
@@ -107,7 +105,7 @@
 	          			
 	        		</div>
 	
-	        		<!-- Agrupar los enlaces de navegaciÃ³n, los formularios y cualquier
+	        		<!-- Agrupar los enlaces de navegación, los formularios y cualquier
 	       				 otro elemento que se pueda ocultar al minimizar la barra -->
 	        		<div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">  
 	          			<ul class="nav navbar-nav" id="menu-items">
@@ -131,8 +129,8 @@
 			<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<!-- <div class="container-fluid">-->		
 		      		<div class="container">
-		      		 	<!-- El logotipo y el icono que despliega el menÃº se agrupan
-		       				 para mostrarlos mejor en los dispositivos mÃ³viles -->
+		      		 	<!-- El logotipo y el icono que despliega el menú se agrupan
+		       				 para mostrarlos mejor en los dispositivos móviles -->
 		       			<div class="navbar-header">       				
 			          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			           		<span class="sr-only">Toggle navigation</span>
@@ -145,7 +143,7 @@
 			          		</div>
 		        		</div>
 		
-		        		<!-- Agrupar los enlaces de navegaciÃ³n, los formularios y cualquier
+		        		<!-- Agrupar los enlaces de navegación, los formularios y cualquier
 		       				 otro elemento que se pueda ocultar al minimizar la barra -->
 		        		<div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">  
 		          			<ul class="nav navbar-nav" id="menu-items">
@@ -164,13 +162,13 @@
 			            				<li><a href="personal/perfil">Mi Perfil</a></li>
 				        				<li><a href="personal/candidaturas">Mis Candidaturas</a></li>
 				        				<!-- <li><a href="personal/cambioemail">Cambiar E-mail</a></li>-->
-				        				<li><a href="personal/cambiopassword">Cambiar ContraseÃ±a</a></li>
+				        				<li><a href="personal/cambiopassword">Cambiar Contraseña</a></li>
 				        				<li><a href="#" data-toggle="modal" data-target="#myModal">Cancelar Cuenta</a></li>
 		            				</ul> 	            				
 		            				            			
 		            			</li>
 		            			
-		            			<li><a href="logout">Cerrar SesiÃ³n</a></li>      			
+		            			<li><a href="logout">Cerrar Sesión</a></li>      			
 		          			</ul>
 		        		</div>
 		      		</div>
@@ -182,11 +180,11 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="myModalLabel">CancelaciÃ³n de Cuenta</h4>
+							<h4 class="modal-title" id="myModalLabel">Cancelación de Cuenta</h4>
 						</div>
 						<div class="modal-body">
-							<p>Â¿Realmente deseas cancelar tu cuenta?</p>
-							<p>Esta operaciÃ³n es irreversible</p>
+							<p>¿Realmente deseas cancelar tu cuenta?</p>
+							<p>Esta operación es irreversible</p>
 						</div>
 						<div class="modal-footer">
 							<form name="form-cancel-account" action="personal/cancelarcuenta" method="post">
@@ -206,8 +204,8 @@
 			<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<!-- <div class="container-fluid">	-->	
 		      		<div class="container">
-		      		 	<!-- El logotipo y el icono que despliega el menÃº se agrupan
-		       				 para mostrarlos mejor en los dispositivos mÃ³viles -->
+		      		 	<!-- El logotipo y el icono que despliega el menú se agrupan
+		       				 para mostrarlos mejor en los dispositivos móviles -->
 		       			<div class="navbar-header">       				
 			          		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			           		<span class="sr-only">Toggle navigation</span>
@@ -221,7 +219,7 @@
 		          			
 		        		</div>
 		
-		        		<!-- Agrupar los enlaces de navegaciÃ³n, los formularios y cualquier
+		        		<!-- Agrupar los enlaces de navegación, los formularios y cualquier
 		       				 otro elemento que se pueda ocultar al minimizar la barra -->
 		        		<div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">  
 		          			<!-- <ul class="nav navbar-nav" id="menu-items">
@@ -232,7 +230,7 @@
 		            		</ul> -->
 		            		<ul class="nav navbar-nav navbar-right" id="menu-items">
 		            			<li><a href="home">${nombreUsuConectado} </a></li> 
-		            			<li><a href="logout">Cerrar SesiÃ³n</a></li>      			
+		            			<li><a href="logout">Cerrar Sesión</a></li>      			
 		          			</ul>
 		        		</div>
 		      		</div>
@@ -240,7 +238,7 @@
 			</nav>
 			
 			<div class="container" style="margin-top: 80px">
-			<h2>PÃ¡gina de Administrador</h2>
+			<h2>Página de Administrador</h2>
 			
 			<table class="table table-bordered" id="idTabla">
 				<tr>
@@ -270,16 +268,16 @@
 				
 				<p> ${job.ciudad.nombreCiudad} | <fmt:formatDate value="${job.fechapublicacion}" pattern="dd-MM-yyyy"/></p><!-- ${job.fechapublicacion} -->
 				 
-				<p class="job-detail-labels">DescripciÃ³n</p>					
+				<p class="job-detail-labels">Descripción</p>					
 				<p class="job-detail-format">${job.descripcion}</p>
 				
-				<p class="job-detail-labels">Requisitos mÃ­nimos</p>
+				<p class="job-detail-labels">Requisitos mínimos</p>
 				<p class="job-detail-format">${job.requisitosminimos}</p>
 				
-				<p class="job-detail-labels">Estudios mÃ­nimos</p>
+				<p class="job-detail-labels">Estudios mínimos</p>
 				<p>${job.estudiosminimos}</p>
 				
-				<p class="job-detail-labels">Experiencia mÃ­nima</p>
+				<p class="job-detail-labels">Experiencia mínima</p>
 				<p>${job.experienciaminima}</p>	
 				
 				<p class="job-detail-labels">Tipo de Contrato</p>
@@ -304,7 +302,7 @@
 
 			<c:if test="${yainscrito}">
 				<p>
-				<span>Ya estÃ¡s inscrito a esta oferta</span>
+				<span>Ya estás inscrito a esta oferta</span>
 				</p>
 			</c:if>
 			
@@ -333,9 +331,9 @@
 			<h3>NIMBU</h3>			
 			<p class="footer-links">
 				<a href="legal">Aviso Legal</a>			    
-			    Â·
-			    <a href="cookies">PolÃ­tica de cookies</a>
-			    Â·
+			    ·
+			    <a href="cookies">Política de cookies</a>
+			    ·
 			    <a href="contacto">Contacto</a>
 			</p>			
 			<p class="footer-company-name">&copy; 2017 NIMBU</p>

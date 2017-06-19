@@ -1,6 +1,7 @@
 .job-detail-labels{
 	font-size:18px;	
 	font-weight: bold;
+	color:#469AB6;
 }
 
 .job-detail-format{
@@ -9,8 +10,9 @@
 
 #idJob-Detail-Container{
 	margin-top: 80px;
-	max-width:800px;
+	max-width:600px;
 	margin-left:45px;	
+	font-family:montserrat;
 }
 
 #idTitulo-Job-Detail{

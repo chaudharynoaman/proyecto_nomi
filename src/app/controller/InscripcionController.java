@@ -78,7 +78,8 @@ public class InscripcionController extends HttpServlet {
 
 					request.setAttribute("linkCV", "C:\\Users\\chaudhary\\Desktop\\resultado.pdf");*/
 					
-					request.getRequestDispatcher("view/inscripcionPreview.jsp").forward(request, response);
+					//request.getRequestDispatcher("view/inscripcionPreview.jsp").forward(request, response);
+					response.sendRedirect(request.getContextPath() + "/job");
 				}
 			
 			} catch (SerialException e) {
@@ -95,7 +96,8 @@ public class InscripcionController extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("view/inscripcionPreview.jsp").forward(request, response);
+		//request.getRequestDispatcher("view/inscripcionPreview.jsp").forward(request, response);
+		response.sendRedirect(request.getContextPath() + "/job");
 	}
 
 	private byte[] readBytesFromFile(Part filePart) throws IOException {

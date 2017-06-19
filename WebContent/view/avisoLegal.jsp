@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -8,7 +7,7 @@
 <html>
 <head>
 <title>Nimbu | Aviso Legal</title>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<meta charset="ISO-8859-1">
 <!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -23,8 +22,7 @@
 
 		
 
-		<link rel="icon" href="http://www.altran.es/fileadmin/templates/main/img/altran/favicon.ico" type="image/x-ico; charset=binary" />
-		
+		<link rel="icon" href="./images/favicon.png" type="image/x-ico; charset=binary" />		
 		
 		<!-- External fonts -->    
     	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -75,7 +73,7 @@
 			    "message": "Este sitio utiliza cookies para ofrecerle un servicio más rápido y personalizado. Al acceder a esta página consideramos que acepta su uso. Puede obtener más información",
 			    "dismiss": "Aceptar",
 			    "link": "aquí.",
-			    "href": "cookies.jsp"
+			    "href": "./cookies"
 			  }
 			})});
 		</script>	
@@ -263,7 +261,7 @@
  
 <div class="container" id="idLegal-Container">
 	<h3 id="legal-headings">Aviso Legal</h3>
-	<p id="legal-headings">Condiciones Generales de uso de la página Web de Nimbu España</p>
+	<h3 id="legal-headings">Condiciones Generales de uso de la página Web de Nimbu España</h3>
 	Nimbu ha creado esta Web con carácter exclusivamente informativo, y su finalidad es facilitar al público en 
 	general información relativa a los productos y servicios que el Grupo Nimbu ofrece en España. 
 	Por favor, lea con atención la información que incluimos a continuación, antes de hacer uso de esta página 
@@ -274,7 +272,7 @@
 	
 	
 	
-	<p id="legal-headings">1. DERECHOS DE PROPIEDAD INTELECTUAL E INDUSTRIAL</p>
+	<h3 id="legal-headings">1. DERECHOS DE PROPIEDAD INTELECTUAL E INDUSTRIAL</h3>
 	<p>Nimbu es titular de todos los derechos de propiedad industrial e intelectual referidos a los contenidos de 
 	esta página Web, incluyendo textos, imágenes, ficheros, sonidos, marcas, logotipos, combinaciones de colores o 
 	cualquier otro elemento, su estructura de navegación y diseño, y la forma de presentación de los materiales. 

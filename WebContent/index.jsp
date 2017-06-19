@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -15,7 +14,7 @@
   	<head>
   		<title>Nimbu | Home</title>  
 
-		<meta charset="utf-8">
+		<meta charset="ISO-8859-1">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -71,7 +70,7 @@
 			"message": "Este sitio utiliza cookies para ofrecerle un servicio más rápido y personalizado. Al acceder a esta página consideramos que acepta su uso. Puede obtener más información",
 		    "dismiss": "Aceptar",
 		    "link": "aquí.",
-		    "href": "cookies.jsp"
+		    "href": "cookies"
 		  }
 		})});
 	</script>
@@ -133,7 +132,7 @@
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" id="carrusel-items">
 					    <div class="item active">
-					      <img src="images/transformaciondigital.jpg" alt="Chania" >
+					      <img src="images/transformaciondigital.jpg" alt="" >
 					      <div class="carousel-caption">
 					        <h3>Transformación digital</h3>
 					        <p>La gran oportunidad para las empresas españolas</p>
@@ -141,7 +140,7 @@
 					    </div>
 			
 					    <div class="item" id="carrusel-items">
-					      <img src="images/modelo_innovacion.png" alt="Chicago">
+					      <img src="images/modelo_innovacion.png" alt="">
 					      <div class="carousel-caption">
 					        <h3>Abierto, ágil y flexible</h3>
 					        <p>Así es nuestro nuevo modelo de innovación</p>
@@ -149,7 +148,7 @@
 					    </div>
 			
 					    <div class="item" id="carrusel-items">
-					      <img src="images/banner.jpg" alt="New York">
+					      <img src="images/banner.jpg" alt="">
 					      <div class="carousel-caption">
 					        <h3>¿Construimos juntos el futuro?</h3>
 					        <p>Únete a nimbu y deja tu huella en proyectos innovadores de referencia</p>
@@ -173,7 +172,7 @@
 				<div class="row">
 					<div class="col-sm-4 portfolio-item">
 						<div class="thumbnail">
-					        <a href="servicios">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/digi.jpg" alt="" class="img-responsive">
 					          <div class="caption">
 					          	<h3>IT Agility</h3>
@@ -185,7 +184,7 @@
                 	</div>
                 	<div class="col-sm-4 portfolio-item">
 						<div class="thumbnail">
-					        <a href="servicios">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/nwork.jpg" alt="" class="img-responsive">
 					          <div class="caption">
 					          	<h3>Network</h3>
@@ -197,7 +196,7 @@
                 	</div>
                 	<div class="col-sm-4 portfolio-item">
 						<div class="thumbnail">
-					        <a href="servicios">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/digital-uno.png" alt="" class="img-responsive">
 					          <div class="caption">
 					          <h3>Digital</h3>
@@ -217,7 +216,7 @@
 				<div class="row">				
 					<div class="col-sm-6 portfolio-item">
 						<div class="thumbnail">
-					        <a href="">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/ge.png" alt=""  class="img-responsive">
 					          <div class="caption">
 					          <h3>Intelligent Systems</h3>
@@ -230,7 +229,7 @@
                 	
                 	<div class="col-sm-6 portfolio-item">
 						<div class="thumbnail">
-					        <a href="job">
+					        <a href="job" id="links-main-body">
 					          <img src="images/jobs.jpg" alt=""  class="img-responsive">
 					          <div class="caption">
 					          <h3>Tu primer empleo en nimbu</h3>
@@ -356,7 +355,7 @@
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner" id="carrusel-items">
 					    <div class="item active">
-					      <img src="images/transformaciondigital.jpg" alt="Chania" >
+					      <img src="images/transformaciondigital.jpg" alt="" >
 					      <div class="carousel-caption">
 					        <h3>Transformación digital</h3>
 					        <p>La gran oportunidad para las empresas españolas</p>
@@ -364,7 +363,7 @@
 					    </div>
 			
 					    <div class="item" id="carrusel-items">
-					      <img src="images/modelo_innovacion.png" alt="Chicago">
+					      <img src="images/modelo_innovacion.png" alt="">
 					      <div class="carousel-caption">
 					        <h3>Abierto, ágil y flexible</h3>
 					        <p>Así es nuestro nuevo modelo de innovación</p>
@@ -372,7 +371,7 @@
 					    </div>
 			
 					    <div class="item" id="carrusel-items">
-					      <img src="images/banner.jpg" alt="New York">
+					      <img src="images/banner.jpg" alt="">
 					      <div class="carousel-caption">
 					        <h3>¿Construimos juntos el futuro?</h3>
 					        <p>Únete a nimbu y deja tu huella en proyectos innovadores de referencia</p>
@@ -396,7 +395,7 @@
 				<div class="row">
 					<div class="col-sm-4 portfolio-item">
 						<div class="thumbnail">
-					        <a href="servicios">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/digi.jpg" alt="" class="img-responsive">
 					          <div class="caption">
 					          	<h3>IT Agility</h3>
@@ -408,7 +407,7 @@
                 	</div>
                 	<div class="col-sm-4 portfolio-item">
 						<div class="thumbnail">
-					        <a href="servicios">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/nwork.jpg" alt="" class="img-responsive">
 					          <div class="caption">
 					          	<h3>Network</h3>
@@ -420,7 +419,7 @@
                 	</div>
                 	<div class="col-sm-4 portfolio-item">
 						<div class="thumbnail">
-					        <a href="servicios">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/digital-uno.png" alt="" class="img-responsive">
 					          <div class="caption">
 					          <h3>Digital</h3>
@@ -440,7 +439,7 @@
 				<div class="row">				
 					<div class="col-sm-6 portfolio-item">
 						<div class="thumbnail">
-					        <a href="">
+					        <a href="servicios" id="links-main-body">
 					          <img src="images/ge.png" alt=""  class="img-responsive">
 					          <div class="caption">
 					          <h3>Intelligent Systems</h3>
@@ -453,7 +452,7 @@
                 	
                 	<div class="col-sm-6 portfolio-item">
 						<div class="thumbnail">
-					        <a href="job">
+					        <a href="job" id="links-main-body">
 					          <img src="images/jobs.jpg" alt=""  class="img-responsive">
 					          <div class="caption">
 					          <h3>Tu primer empleo en nimbu</h3>

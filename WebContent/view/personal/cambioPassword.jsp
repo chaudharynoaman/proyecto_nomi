@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -33,8 +32,7 @@
 
 		
 
-		<link rel="icon" href="http://www.altran.es/fileadmin/templates/main/img/altran/favicon.ico" type="image/x-ico; charset=binary" />
-		
+		<link rel="icon" href="../images/favicon.png" type="image/x-ico; charset=binary" />				
 		
 		<!-- External fonts -->    
     	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -85,7 +83,7 @@
 			    "message": "Este sitio utiliza cookies para ofrecerle un servicio más rápido y personalizado. Al acceder a esta página consideramos que acepta su uso. Puede obtener más información",
 			    "dismiss": "Aceptar",
 			    "link": "aquí.",
-			    "href": "cookies.jsp"
+			    "href": "../cookies"
 			  }
 			})});
 		</script>	
@@ -278,7 +276,9 @@
 			<div class="form-group has-feedback">
 				<label for="labelOldPassword" class="control-label">* Contraseña Antigua</label>
 				<input type="password" name="old-password" class="form-control" id="idOld-Password" 
-				data-error="La contraseña debe tener mínimo 2 caracteres" minlength="2" maxlength="20" 
+				pattern="^[a-zA-Z0-9ñÑ\S]{2,20}$"
+				data-error="La contraseña debe tener entre 2 y 20 caracteres. No se admiten espacios"
+				minlength="2" maxlength="20" 
 				autocomplete="off" oncopy="return false" onpaste="return false"  data-toggle="password" required/>
 				<!-- <span class="glyphicon form-control-feedback"></span>-->
 				<div class="help-block with-errors"></div>
@@ -287,7 +287,9 @@
 			<div class="form-group has-feedback">
 				<label for="labelNewPassword" class="control-label">* Nueva Contraseña</label>
 				<input type="password" name="new-password" class="form-control" id="idNew-Password" 
-				data-error="La contraseña debe tener mínimo 2 caracteres" minlength="2" maxlength="20" 
+				pattern="^[a-zA-Z0-9ñÑ\S]{2,20}$"
+				data-error="La contraseña debe tener entre 2 y 20 caracteres. No se admiten espacios" 
+				minlength="2" maxlength="20" 
 				autocomplete="off" oncopy="return false" onpaste="return false"  data-toggle="password" required/>
 				<!-- <span class="glyphicon form-control-feedback"></span>-->
 				<div class="help-block with-errors"></div>
@@ -296,7 +298,8 @@
 			<div class="form-group has-feedback">
 				<label for="labelConfirmNewPassword" class="control-label">* Repita la Contraseña</label>
 				<input type="password" name="confirm-new-password" class="form-control" id="idConfirm-New-Password" 
-				data-match="#idNew-Password" data-match-error="Las contraseñas deben ser iguales" minlength="2" maxlength="20" 
+				data-match="#idNew-Password" pattern="^[a-zA-Z0-9ñÑ\S]{2,20}$"
+				data-match-error="Las contraseñas no coinciden" minlength="2" maxlength="20" 
 				autocomplete="off" oncopy="return false" onpaste="return false" data-toggle="password" required/>							
 				<!-- <span class="glyphicon form-control-feedback" aria-hidden="true"></span>-->
 				<div class="help-block with-errors"></div>

@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -35,8 +34,7 @@
 
 		
 
-		<link rel="icon" href="http://www.altran.es/fileadmin/templates/main/img/altran/favicon.ico" type="image/x-ico; charset=binary" />
-		
+		<link rel="icon" href="../images/favicon.png" type="image/x-ico; charset=binary" />		
 		
 		<!-- External fonts -->    
     	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -141,7 +139,7 @@
 			    "message": "Este sitio utiliza cookies para ofrecerle un servicio más rápido y personalizado. Al acceder a esta página consideramos que acepta su uso. Puede obtener más información",
 			    "dismiss": "Aceptar",
 			    "link": "aquí.",
-			    "href": "cookies.jsp"
+			    "href": "../cookies"
 			  }
 			})});
 		</script>	

@@ -15,6 +15,13 @@
 	font-weight: normal; 
 }
 
+body{
+	font-family:'Montserrat';
+	
+}
+#links-main-body{
+	text-decoration:none;
+}
 
 #body-main-content{	
 	margin-top:80px;

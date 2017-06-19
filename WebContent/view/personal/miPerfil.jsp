@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
@@ -14,7 +12,7 @@
 
 <title>Mi Perfil | Nimbu</title>
 
-	<meta charset="ISO-8859-1">
+		<meta charset="ISO-8859-1">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -33,8 +31,7 @@
 
 		
 
-		<link rel="icon" href="http://www.altran.es/fileadmin/templates/main/img/altran/favicon.ico" type="image/x-ico; charset=binary" />
-		
+		<link rel="icon" href="../images/favicon.png" type="image/x-ico; charset=binary" />		
 		
 		<!-- External fonts -->    
     	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -87,7 +84,7 @@
 			    "message": "Este sitio utiliza cookies para ofrecerle un servicio más rápido y personalizado. Al acceder a esta página consideramos que acepta su uso. Puede obtener más información",
 			    "dismiss": "Aceptar",
 			    "link": "aquí.",
-			    "href": "cookies.jsp"
+			    "href": "../cookies"
 			  }
 			})});
 		</script>	
@@ -275,9 +272,9 @@
 
 <div class="container" id="idMi-Perfil-Container">
 
-	<h2 class="form-signin-heading" id="idMi-Perfil-Titulo">Mi Perfil</h2>
+	
 		
-		<div class="usuario${usuario.id}" id="idDatos-Personales">
+		<%-- <div class="usuario${usuario.id}" id="idDatos-Personales">
 			<p>Nombre: ${usuario.nombre}</p>
 			<p>Apellidos: ${usuario.apellidos}</p>
 		</div>
@@ -286,13 +283,13 @@
 		
 		<div class="form-group">
 			<button class="btn btn-primary" type="button" id="idBoton-Modificar-Datos-Personales" onclick="verDatos()" >Modificar datos</button>
-		</div>
+		</div> --%>
 		
 		
-		<div id="idDatos-Personales-Modificar" style="visibility: hidden;">
+		<div id="idDatos-Personales-Modificar">
 			
 			<form class="form-signin" method="post" action="modificardatos" id="idForm-Modificar-Datos" role="form" data-toggle="validator">
-							
+				<h2 class="form-signin-heading" id="idMi-Perfil-Titulo">Mis Datos Personales</h2>			
 				<!-- <input type="text" name="nombremod" value="${usuario.nombre}">-->					
 				<div class="form-group has-feedback">
 					<label for="labelNombreMod" class="control-label">Nombre</label>
@@ -324,7 +321,9 @@
 				<div class="form-group">
 					<button class="btn btn-md btn-primary btn-block" type="submit" id="idSubmit-Modificar-Datos">GUARDAR NUEVOS DATOS</button>
 				</div>
-			
+				<div class="form-group">
+					<p>Modifica los campos que desees y guarda los datos. Los cambios se reflejarán al entrar de nuevo.</p> 
+				</div>
 			</form> 
 		</div>
 </div>	
