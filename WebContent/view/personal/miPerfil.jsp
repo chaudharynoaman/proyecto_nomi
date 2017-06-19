@@ -322,7 +322,7 @@
 					<button class="btn btn-md btn-primary btn-block" type="submit" id="idSubmit-Modificar-Datos">GUARDAR NUEVOS DATOS</button>
 				</div>
 				<div class="form-group">
-					<p>Modifica los campos que desees y guarda los datos. Los cambios se reflejarán al entrar de nuevo.</p> 
+					<p>Modifica los campos que desees y guarda los datos.</p> 
 				</div>
 			</form> 
 		</div>
